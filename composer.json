@@ -1,0 +1,20 @@
+{
+    "name": "expresso/backend",
+    "description": "Expresso Backend",
+    "type": "library",
+    "keywords": [
+        "backend",
+        "expresso",
+        "framework"
+    ],
+    "homepage": "http://gitlab.serpro/flavio.lisboa/expresso-backend",
+    "license": "AGPL",
+    "autoload": {
+        "psr-4": {
+            "Expresso\\Backend\\": "src/Expresso/Backend"
+        }
+    },
+    "require": {
+        "php": ">=5.4"
+    }
+}
