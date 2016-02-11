@@ -7,22 +7,27 @@
  * @copyright Copyright (c) 2016 SERPRO (http://www.serpro.gov.br)
  * @license   https://www.gnu.org/licenses/agpl.txt GNU AFFERO GENERAL PUBLIC LICENSE
  */
-namespace Expresso\Backend;
+namespace Expresso\Test\Backend\Filter;
 
+use Expresso\Backend\Filter\FilterInterface;
+use Zend\Db\Sql\Where;
 /**
  * 
  * @package    Expresso
  * @subpackage Backend
  */
-class BackendFactory {
+class MockFilter implements FilterInterface
+{
     /**
-     * @param string $adapter
-     * @param string $namespace (optional)
-     * @return CrudInterface
+     * 
+     * @var Where
      */
-    public function create($adapter, $namespace = 'Expresso\Backend\Adapter\\')
+    protected $where = NULL;
+    /**
+     * @return Where
+     */
+    public function getWhere()
     {
-        $class = $namespace . $adapter;
-        return new $class(); 
+        return $where;
     }
 }

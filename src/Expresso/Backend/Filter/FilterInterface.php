@@ -7,13 +7,18 @@
  * @copyright Copyright (c) 2016 SERPRO (http://www.serpro.gov.br)
  * @license   https://www.gnu.org/licenses/agpl.txt GNU AFFERO GENERAL PUBLIC LICENSE
  */
-namespace Expresso\Backend\Record;
+namespace Expresso\Backend\Filter;
 
+use Zend\Db\Sql\Where;
 /**
- *
+ * 
  * @package    Expresso
  * @subpackage Backend
  */
-class ValidationException extends \Exception
+interface FilterInterface
 {
+    /**
+     * @return Where
+     */
+    public function getWhere();
 }

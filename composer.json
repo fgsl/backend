@@ -15,6 +15,8 @@
         }
     },
     "require": {
-        "php": ">=5.4"
+        "php": ">=5.4",
+        "zendframework/zend-db" : "2.6.*",
+        "zendframework/zend-servicemanager" : "2.6.*"
     }
 }
