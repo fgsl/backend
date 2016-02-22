@@ -1,4 +1,4 @@
-# A generic interface for data recovering and persistence. Uses Adapter design pattern to allow different paradigms of storage.
+# A generic interface for data recovering and persistence.
 
 ## Synopsis
 
