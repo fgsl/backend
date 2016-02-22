@@ -25,7 +25,7 @@ class GatewayFactory
      * @param string $namespace (optional)
      * @return GatewayInterface
      */
-    public function create($gatewayType, $modelName, ServiceLocatorInterface $serviceLocator, $namespace = 'Expresso\Backend\Gateway\\')
+    public static function create($gatewayType, $modelName, ServiceLocatorInterface $serviceLocator, $namespace = 'Expresso\Backend\Gateway\\')
     {
         $class = $namespace . $gatewayType;
         return new $class($modelName, $serviceLocator);
