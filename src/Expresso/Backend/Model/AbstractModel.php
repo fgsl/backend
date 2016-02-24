@@ -17,7 +17,6 @@ namespace Expresso\Backend\Model;
 abstract class AbstractModel implements ModelInterface
 {
     /**
-     * 
      * @var string
      */
     protected $modelName = NULL;
@@ -28,10 +27,10 @@ abstract class AbstractModel implements ModelInterface
     protected $properties = array();
 
     /**
-     * 
      * @var string
      */
     protected $idProperty = NULL;
+
     /**
      * @param string $name
      * @return mixed

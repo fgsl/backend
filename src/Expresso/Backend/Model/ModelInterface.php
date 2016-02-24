@@ -44,4 +44,9 @@ interface ModelInterface
      * @return string
      */
     public function getIdProperty();
+
+    /**
+     * @return ModelInterface
+     */
+    public function getFromRequest();
 }
