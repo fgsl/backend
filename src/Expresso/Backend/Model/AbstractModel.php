@@ -27,6 +27,16 @@ abstract class AbstractModel implements ModelInterface
     protected $properties = array();
 
     /**
+     * @var array
+     */
+    protected $filters = array();
+
+    /**
+     * @var array
+     */
+    protected $validators = array();
+
+    /**
      * @var string
      */
     protected $idProperty = NULL;
