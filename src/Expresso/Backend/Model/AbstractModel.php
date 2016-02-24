@@ -32,8 +32,8 @@ abstract class AbstractModel implements ModelInterface
     protected $idProperty = NULL;
 
     /**
-     * @param string $name
-     * @return mixed
+     * (non-PHPdoc)
+     * @see \Expresso\Backend\Model\ModelInterface::__get()
      */
     public function __get($name)
     {
@@ -41,8 +41,8 @@ abstract class AbstractModel implements ModelInterface
     }
 
     /**
-     * @param string $name
-     * @param mixed $value
+     * (non-PHPdoc)
+     * @see \Expresso\Backend\Model\ModelInterface::__set()
      */
     public function __set($name, $value)
     {
@@ -50,7 +50,8 @@ abstract class AbstractModel implements ModelInterface
     }
 
     /**
-     * @return string 
+     * 
+     * @return string
      */
     public function getModelName()
     {
@@ -58,7 +59,8 @@ abstract class AbstractModel implements ModelInterface
     }
 
     /**
-     * @return string
+     * (non-PHPdoc)
+     * @see \Expresso\Backend\Model\ModelInterface::getIdProperty()
      */
     public function getIdProperty()
     {
@@ -66,7 +68,8 @@ abstract class AbstractModel implements ModelInterface
     }
 
     /**
-     * @param mixed $input
+     * (non-PHPdoc)
+     * @see \Expresso\Backend\Model\ModelInterface::exchangeArray()
      */
     public function exchangeArray($input)
     {
@@ -74,10 +77,22 @@ abstract class AbstractModel implements ModelInterface
     }
 
     /**
-     * @return array
+     * (non-PHPdoc)
+     * @see \Expresso\Backend\Model\ModelInterface::getArrayCopy()
      */
     public function getArrayCopy()
     {
         return $this->properties;
+    }
+
+    /**
+     * (non-PHPdoc)
+     * @see \Expresso\Backend\Model\ModelInterface::getFromRequest()
+     */
+    public function getFromRequest()
+    {
+        $input = file_get_contents('php://input');
+        $input = str_replace('\'', '"',$input);
+        return (array) json_decode($input);
     }
 }
