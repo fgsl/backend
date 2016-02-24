@@ -48,5 +48,5 @@ interface ModelInterface
     /**
      * @return ModelInterface
      */
-    public function getFromRequest();
+    public static function getFromRequest();
 }
