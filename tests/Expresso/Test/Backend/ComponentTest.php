@@ -16,9 +16,9 @@ use Expresso\Test\Backend\Gateway\MockGateway;
 use Expresso\Backend\Gateway\GatewayFactory;
 use Expresso\Backend\Gateway\GatewayInterface;
 use Expresso\Backend\Model\ModelInterface;
-use Expresso\Test\Backend\Filter\MockFilter;
 use Zend\Db\ResultSet\ResultSetInterface;
 use Expresso\Test\Backend\Model\MockModel;
+use Expresso\Test\Backend\SearchFilter\MockSearchFilter;
 
 /**
  * 
@@ -97,7 +97,7 @@ class ComponentTest extends \PHPUnit_Framework_TestCase
     {
         $model = $this->gateway->get(1);
         $this->assertTrue($model instanceof ModelInterface);
-        $models = $this->gateway->getAll(new MockFilter());
+        $models = $this->gateway->getAll(new MockSearchFilter());
         $this->assertTrue($models instanceof ResultSetInterface);
     }
 }

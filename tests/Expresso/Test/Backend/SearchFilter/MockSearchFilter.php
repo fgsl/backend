@@ -7,16 +7,16 @@
  * @copyright Copyright (c) 2016 SERPRO (http://www.serpro.gov.br)
  * @license   https://www.gnu.org/licenses/agpl.txt GNU AFFERO GENERAL PUBLIC LICENSE
  */
-namespace Expresso\Test\Backend\Filter;
+namespace Expresso\Test\Backend\SearchFilter;
 
-use Expresso\Backend\Filter\FilterInterface;
 use Zend\Db\Sql\Where;
+use Expresso\Backend\SearchFilter\SearchFilterInterface;
 /**
  * 
  * @package    Expresso
  * @subpackage Backend
  */
-class MockFilter implements FilterInterface
+class MockSearchFilter implements SearchFilterInterface
 {
     /**
      * 

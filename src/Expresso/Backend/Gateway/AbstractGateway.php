@@ -10,7 +10,6 @@
 namespace Expresso\Backend\Gateway;
 
 use Expresso\Backend\Model\ModelInterface;
-use Expresso\Backend\Filter\FilterInterface;
 use Zend\Db\ResultSet\ResultSetInterface;
 /**
  * 

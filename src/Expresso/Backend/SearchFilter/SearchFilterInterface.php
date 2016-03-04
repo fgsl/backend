@@ -7,7 +7,7 @@
  * @copyright Copyright (c) 2016 SERPRO (http://www.serpro.gov.br)
  * @license   https://www.gnu.org/licenses/agpl.txt GNU AFFERO GENERAL PUBLIC LICENSE
  */
-namespace Expresso\Backend\Filter;
+namespace Expresso\Backend\SearchFilter;
 
 use Zend\Db\Sql\Where;
 /**
@@ -15,7 +15,7 @@ use Zend\Db\Sql\Where;
  * @package    Expresso
  * @subpackage Backend
  */
-interface FilterInterface
+interface SearchFilterInterface
 {
     /**
      * @return Where

@@ -10,7 +10,6 @@
 namespace Expresso\Test\Backend\Gateway;
 
 use Expresso\Backend\Model\ModelInterface;
-use Expresso\Backend\Filter\FilterInterface;
 use Zend\Db\ResultSet\ResultSetInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 use Zend\Db\Adapter\AdapterInterface;
@@ -20,6 +19,7 @@ use Expresso\Backend\Exception\NotPersistedException;
 use Zend\Db\ResultSet\ResultSet;
 use Expresso\Test\Backend\Model\MockModel;
 use Expresso\Backend\Gateway\AbstractGateway;
+use Expresso\Backend\SearchFilter\SearchFilterInterface;
 /**
  * 
  * @package    Expresso
@@ -86,7 +86,7 @@ class MockGateway extends AbstractGateway
      * (non-PHPdoc)
      * @see \Expresso\Backend\Gateway\GatewayInterface::getAll()
      */
-    public function getAll(FilterInterface $filter = NULL){
+    public function getAll(SearchFilterInterface $filter = NULL){
         $resultSet = new ResultSet();
         $resultSet->setArrayObjectPrototype(new MockModel());
         return $resultSet;

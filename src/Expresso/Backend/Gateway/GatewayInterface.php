@@ -10,9 +10,9 @@
 namespace Expresso\Backend\Gateway;
 
 use Expresso\Backend\Model\ModelInterface;
-use Expresso\Backend\Filter\FilterInterface;
 use Zend\Db\ResultSet\ResultSetInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
+use Expresso\Backend\SearchFilter\SearchFilterInterface;
 /**
  * 
  * @package    Expresso
@@ -64,10 +64,10 @@ interface GatewayInterface
 
     /**
      * Get several records from filter criteria 
-     * @param FilterInterface $filter
+     * @param SearchFilterInterface $filter
      * @return ResultSetInterface
      */
-    public function getAll(FilterInterface $filter = NULL);
+    public function getAll(SearchFilterInterface $filter = NULL);
 
     /**
      * Get several records from a property value 

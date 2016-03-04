@@ -10,7 +10,6 @@
 namespace Expresso\Backend\Gateway;
 
 use Expresso\Backend\Model\ModelInterface;
-use Expresso\Backend\Filter\FilterInterface;
 use Zend\Db\ResultSet\ResultSetInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 use Zend\Db\Adapter\AdapterInterface;
@@ -18,6 +17,7 @@ use Zend\Db\TableGateway\TableGatewayInterface;
 use Zend\Db\TableGateway\TableGateway;
 use Expresso\Backend\Exception\NotPersistedException;
 use Zend\Db\ResultSet\ResultSet;
+use Expresso\Backend\SearchFilter\SearchFilterInterface;
 /**
  * 
  * @package    Expresso
@@ -122,7 +122,7 @@ class SqlGateway extends AbstractGateway
      * (non-PHPdoc)
      * @see \Expresso\Backend\Gateway\GatewayInterface::getAll()
      */
-    public function getAll(FilterInterface $filter = NULL){
+    public function getAll(SearchFilterInterface $filter = NULL){
         return $this->gateway->select($filter->getWhere());
     }
 
