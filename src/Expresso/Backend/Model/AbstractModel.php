@@ -59,6 +59,11 @@ abstract class AbstractModel implements ModelInterface
         $this->properties[$name] = $value;
     }
 
+    public function __construct($input = array())
+    {
+        $this->properties = $input;
+    }
+
     /**
      * 
      * @return string
@@ -99,7 +104,7 @@ abstract class AbstractModel implements ModelInterface
      * (non-PHPdoc)
      * @see \Expresso\Backend\Model\ModelInterface::getFromRequest()
      */
-    public function getFromRequest()
+    public static function getFromRequest()
     {
         $input = file_get_contents('php://input');
         $input = str_replace('\'', '"',$input);
