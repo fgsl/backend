@@ -7,7 +7,7 @@
         "expresso",
         "framework"
     ],
-    "homepage": "https://git.serpro/27524001878/expresso-backend",
+    "homepage": "https://github.com/fgsl/expresso-backend",
     "license": "AGPL",
     "autoload": {
         "psr-4": {
