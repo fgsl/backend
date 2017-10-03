@@ -1,28 +1,28 @@
 <?php
 /**
- * Expresso Backend - a generic interface for data recovering and persistence
+ * Fgsl Backend - A generic interface for data recovering and persistence 
  *
- * @author    Flávio Gomes da Silva Lisboa <flavio.lisboa@serpro.gov.br>
- * @link      https://gitlab.com/expresso_livre/expresso for the canonical source repository
- * @copyright Copyright (c) 2016 SERPRO (http://www.serpro.gov.br)
+ * @author    Flávio Gomes da Silva Lisboa <flavio.lisboa@fgsl.eti.br>
+ * @link      https://github.com/fgsl/backend for the canonical source repository
+ * @copyright Copyright (c) 2017 FGSL (http://www.fgsl.eti.br)
  * @license   https://www.gnu.org/licenses/agpl.txt GNU AFFERO GENERAL PUBLIC LICENSE
  */
-namespace Expresso\Test\Backend\Gateway;
+namespace Fgsl\Test\Backend\Gateway;
 
-use Expresso\Backend\Model\ModelInterface;
+use Fgsl\Backend\Model\ModelInterface;
 use Zend\Db\ResultSet\ResultSetInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 use Zend\Db\Adapter\AdapterInterface;
 use Zend\Db\TableGateway\TableGatewayInterface;
 use Zend\Db\TableGateway\TableGateway;
-use Expresso\Backend\Exception\NotPersistedException;
+use Fgsl\Backend\Exception\NotPersistedException;
 use Zend\Db\ResultSet\ResultSet;
-use Expresso\Test\Backend\Model\MockModel;
-use Expresso\Backend\Gateway\AbstractGateway;
-use Expresso\Backend\SearchFilter\SearchFilterInterface;
+use Fgsl\Test\Backend\Model\MockModel;
+use Fgsl\Backend\Gateway\AbstractGateway;
+use Fgsl\Backend\SearchFilter\SearchFilterInterface;
 /**
  * 
- * @package    Expresso
+ * @package    Fgsl
  * @subpackage Backend
  */
 class MockGateway extends AbstractGateway
@@ -39,7 +39,7 @@ class MockGateway extends AbstractGateway
 
     /**
      * (non-PHPdoc)
-     * @see \Expresso\Backend\Gateway\GatewayInterface::create()
+     * @see \Fgsl\Backend\Gateway\GatewayInterface::create()
      */
     public function create(ModelInterface $model)
     {
@@ -48,7 +48,7 @@ class MockGateway extends AbstractGateway
 
     /**
      * (non-PHPdoc)
-     * @see \Expresso\Backend\Gateway\GatewayInterface::update()
+     * @see \Fgsl\Backend\Gateway\GatewayInterface::update()
      */
     public function update(ModelInterface $model)
     {
@@ -57,7 +57,7 @@ class MockGateway extends AbstractGateway
 
     /**
      * (non-PHPdoc)
-     * @see \Expresso\Backend\Gateway\GatewayInterface::delete()
+     * @see \Fgsl\Backend\Gateway\GatewayInterface::delete()
      */
     public function delete($id)
     {
@@ -66,7 +66,7 @@ class MockGateway extends AbstractGateway
 
     /**
      * (non-PHPdoc)
-     * @see \Expresso\Backend\Gateway\GatewayInterface::save()
+     * @see \Fgsl\Backend\Gateway\GatewayInterface::save()
      */
     public function save(ModelInterface $model)
     {
@@ -75,7 +75,7 @@ class MockGateway extends AbstractGateway
 
     /**
      * (non-PHPdoc)
-     * @see \Expresso\Backend\Gateway\GatewayInterface::get()
+     * @see \Fgsl\Backend\Gateway\GatewayInterface::get()
      */
     public function get($id)
     {
@@ -84,7 +84,7 @@ class MockGateway extends AbstractGateway
 
     /**
      * (non-PHPdoc)
-     * @see \Expresso\Backend\Gateway\GatewayInterface::getAll()
+     * @see \Fgsl\Backend\Gateway\GatewayInterface::getAll()
      */
     public function getAll(SearchFilterInterface $filter = NULL){
         $resultSet = new ResultSet();
@@ -94,7 +94,7 @@ class MockGateway extends AbstractGateway
 
     /**
      * (non-PHPdoc)
-     * @see \Expresso\Backend\Gateway\GatewayInterface::getMultipleByProperties()
+     * @see \Fgsl\Backend\Gateway\GatewayInterface::getMultipleByProperties()
      */
     public function getMultipleByProperties(array $properties)
     {
@@ -105,7 +105,7 @@ class MockGateway extends AbstractGateway
 
     /**
      * (non-PHPdoc)
-     * @see \Expresso\Backend\Gateway\GatewayInterface::getMultipleByProperty()
+     * @see \Fgsl\Backend\Gateway\GatewayInterface::getMultipleByProperty()
      */
     public function getMultipleByProperty($property, $value)
     {

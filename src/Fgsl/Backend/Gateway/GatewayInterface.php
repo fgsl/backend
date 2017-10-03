@@ -1,21 +1,21 @@
 <?php
 /**
- * Expresso Backend - a generic interface for data recovering and persistence
+ * Fgsl Backend - A generic interface for data recovering and persistence 
  *
- * @author    Flávio Gomes da Silva Lisboa <flavio.lisboa@serpro.gov.br>
- * @link      https://gitlab.com/expresso_livre/expresso for the canonical source repository
- * @copyright Copyright (c) 2016 SERPRO (http://www.serpro.gov.br)
+ * @author    Flávio Gomes da Silva Lisboa <flavio.lisboa@fgsl.eti.br>
+ * @link      https://github.com/fgsl/backend for the canonical source repository
+ * @copyright Copyright (c) 2017 FGSL (http://www.fgsl.eti.br)
  * @license   https://www.gnu.org/licenses/agpl.txt GNU AFFERO GENERAL PUBLIC LICENSE
  */
-namespace Expresso\Backend\Gateway;
+namespace Fgsl\Backend\Gateway;
 
-use Expresso\Backend\Model\ModelInterface;
+use Fgsl\Backend\Model\ModelInterface;
 use Zend\Db\ResultSet\ResultSetInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
-use Expresso\Backend\SearchFilter\SearchFilterInterface;
+use Fgsl\Backend\SearchFilter\SearchFilterInterface;
 /**
  * 
- * @package    Expresso
+ * @package    Fgsl
  * @subpackage Backend
  */
 interface GatewayInterface

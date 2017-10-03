@@ -1,17 +1,17 @@
 <?php
 /**
- * Expresso Backend - a generic interface for data recovering and persistence
+ * Fgsl Backend - a generic interface for data recovering and persistence
  *
  * @author    Flávio Gomes da Silva Lisboa <flavio.lisboa@serpro.gov.br>
  * @link      https://gitlab.com/expresso_livre/expresso for the canonical source repository
  * @copyright Copyright (c) 2016 SERPRO (http://www.serpro.gov.br)
  * @license   https://www.gnu.org/licenses/agpl.txt GNU AFFERO GENERAL PUBLIC LICENSE
  */
-namespace Expresso\Backend\Model;
+namespace Fgsl\Backend\Model;
 
 /**
  * 
- * @package    Expresso
+ * @package    Fgsl
  * @subpackage Backend
  */
 abstract class AbstractModel implements ModelInterface
@@ -43,7 +43,7 @@ abstract class AbstractModel implements ModelInterface
 
     /**
      * (non-PHPdoc)
-     * @see \Expresso\Backend\Model\ModelInterface::__get()
+     * @see \Fgsl\Backend\Model\ModelInterface::__get()
      */
     public function __get($name)
     {
@@ -52,7 +52,7 @@ abstract class AbstractModel implements ModelInterface
 
     /**
      * (non-PHPdoc)
-     * @see \Expresso\Backend\Model\ModelInterface::__set()
+     * @see \Fgsl\Backend\Model\ModelInterface::__set()
      */
     public function __set($name, $value)
     {
@@ -75,7 +75,7 @@ abstract class AbstractModel implements ModelInterface
 
     /**
      * (non-PHPdoc)
-     * @see \Expresso\Backend\Model\ModelInterface::getIdProperty()
+     * @see \Fgsl\Backend\Model\ModelInterface::getIdProperty()
      */
     public function getIdProperty()
     {
@@ -84,7 +84,7 @@ abstract class AbstractModel implements ModelInterface
 
     /**
      * (non-PHPdoc)
-     * @see \Expresso\Backend\Model\ModelInterface::exchangeArray()
+     * @see \Fgsl\Backend\Model\ModelInterface::exchangeArray()
      */
     public function exchangeArray($input)
     {
@@ -93,7 +93,7 @@ abstract class AbstractModel implements ModelInterface
 
     /**
      * (non-PHPdoc)
-     * @see \Expresso\Backend\Model\ModelInterface::getArrayCopy()
+     * @see \Fgsl\Backend\Model\ModelInterface::getArrayCopy()
      */
     public function getArrayCopy()
     {
@@ -102,7 +102,7 @@ abstract class AbstractModel implements ModelInterface
 
     /**
      * (non-PHPdoc)
-     * @see \Expresso\Backend\Model\ModelInterface::getFromRequest()
+     * @see \Fgsl\Backend\Model\ModelInterface::getFromRequest()
      */
     public static function getFromRequest()
     {

@@ -1,28 +1,28 @@
 <?php
 /**
- * Expresso Backend - a generic interface for data recovering and persistence
+ * Fgsl Backend - A generic interface for data recovering and persistence 
  *
- * @author    Flávio Gomes da Silva Lisboa <flavio.lisboa@serpro.gov.br>
- * @link      https://gitlab.com/expresso_livre/expresso for the canonical source repository
- * @copyright Copyright (c) 2016 SERPRO (http://www.serpro.gov.br)
+ * @author    Flávio Gomes da Silva Lisboa <flavio.lisboa@fgsl.eti.br>
+ * @link      https://github.com/fgsl/backend for the canonical source repository
+ * @copyright Copyright (c) 2017 FGSL (http://www.fgsl.eti.br)
  * @license   https://www.gnu.org/licenses/agpl.txt GNU AFFERO GENERAL PUBLIC LICENSE
  */
-namespace Expresso\Test\Backend;
+namespace Fgsl\Test\Backend;
 
 use Zend\ServiceManager\ServiceLocatorInterface;
 use Zend\ServiceManager\ServiceManager;
 use Zend\ServiceManager\Config;
-use Expresso\Test\Backend\Gateway\MockGateway;
-use Expresso\Backend\Gateway\GatewayFactory;
-use Expresso\Backend\Gateway\GatewayInterface;
-use Expresso\Backend\Model\ModelInterface;
+use Fgsl\Test\Backend\Gateway\MockGateway;
+use Fgsl\Backend\Gateway\GatewayFactory;
+use Fgsl\Backend\Gateway\GatewayInterface;
+use Fgsl\Backend\Model\ModelInterface;
 use Zend\Db\ResultSet\ResultSetInterface;
-use Expresso\Test\Backend\Model\MockModel;
-use Expresso\Test\Backend\SearchFilter\MockSearchFilter;
+use Fgsl\Test\Backend\Model\MockModel;
+use Fgsl\Test\Backend\SearchFilter\MockSearchFilter;
 
 /**
  * 
- * @package    Expresso
+ * @package    Fgsl
  * @subpackage Test
  */
 class ComponentTest extends \PHPUnit_Framework_TestCase
@@ -46,7 +46,7 @@ class ComponentTest extends \PHPUnit_Framework_TestCase
             )
         ));
         $this->serviceLocator = new ServiceManager($config);
-        $this->gateway = GatewayFactory::create('MockGateway','mock',$this->serviceLocator,'Expresso\Test\Backend\Gateway\\');
+        $this->gateway = GatewayFactory::create('MockGateway','mock',$this->serviceLocator,'Fgsl\Test\Backend\Gateway\\');
     }
 
     /**
@@ -58,7 +58,7 @@ class ComponentTest extends \PHPUnit_Framework_TestCase
 
         $reflectionClass = new \ReflectionClass(get_class($this->gateway));
         $interfaces = $reflectionClass->getInterfaceNames();
-        $this->assertContains('Expresso\Backend\Gateway\GatewayInterface',$interfaces);
+        $this->assertContains('Fgsl\Backend\Gateway\GatewayInterface',$interfaces);
     }
 
     /**

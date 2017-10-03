@@ -2,11 +2,11 @@
 
 ## Synopsis
 
-Expresso Backend provides classes to save and fetch data based on PHP-FIG patterns.
+Fgsl Backend provides classes to save and fetch data based on PHP-FIG patterns.
 
 ## Test
 
-    phpunit --bootstrap tests/bootstrap.php tests/Expresso/Test/TestSuite.php
+    phpunit --bootstrap tests/bootstrap.php tests/Fgsl/Test/TestSuite.php
 
 ## License
 

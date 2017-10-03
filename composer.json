@@ -1,17 +1,17 @@
 {
-    "name": "expresso/backend",
-    "description": "Expresso Backend",
+    "name": "fgsl/backend",
+    "description": "Fgsl Backend",
     "type": "library",
     "keywords": [
         "backend",
-        "expresso",
+        "fgsl",
         "framework"
     ],
-    "homepage": "https://github.com/fgsl/expresso-backend",
+    "homepage": "https://github.com/fgsl/backend",
     "license": "AGPL",
     "autoload": {
         "psr-4": {
-            "Expresso\\Backend\\": "src/Expresso/Backend"
+            "Fgsl\\Backend\\": "src/Fgsl/Backend"
         }
     },
     "require": {
